@@ -53,19 +53,20 @@ function 	mergeImage(&$sprite, $image_src, $size_img, $size_sprite)
 function 	merge_helper($images, $output)
 {
     $i = 1;
+    var_dump($output);
     foreach ($images as $key => $value) {
         show_status($i, count($images));
         if ($key == 0)
             $sprite = imagecreatefrompng($value);
         else {
             $size_img = (array)getSizeImage($value);
-            imagepng($sprite, "../output/$output");
-            $size_sprite = (array)getSizeImage("../output/$output");
+            imagepng($sprite, $output);
+            $size_sprite = (array)getSizeImage($output);
             mergeImage($sprite, $value, $size_img, $size_sprite);
         }
         $i++;
     }
-    imagepng($sprite, "../output/$output");
+    imagepng($sprite, $output);
 }
 
 /**

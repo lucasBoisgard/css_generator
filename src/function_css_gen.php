@@ -20,5 +20,5 @@ function    css_generator(array $name_images, $output)
         $css .= ".img" . ++$i . "\n{\n\twidth: $w;\n\theight: $h";
         $css .= " ;\n\tbackground-position: $pos[0]$pos[1] $pos[2];\n}\n";
     }
-    file_put_contents("../output/$output" , $css);
+    file_put_contents($output , $css);
 }
