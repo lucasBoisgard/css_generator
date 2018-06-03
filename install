@@ -1,0 +1,21 @@
+#/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+    if [ ! -f /bin/css_generator ]; then
+    	(sed '1 i\#!/usr/bin/php' src/css_generator.php) > /bin/css_generator
+    	chmod +x /bin/css_generator
+	    echo "Successful installation completed"
+    else
+	    echo "This program is already installed."
+    fi
+else
+    if [ -f /bin/css_generator ]; then
+	    arg="-rm"
+    	if [ "$1" = "$arg" ]; then
+    	    rm /bin/css_generator
+    	    echo "Uninstall completed."
+    	fi
+    else
+	    echo "This program is not installed."
+    fi
+fi
