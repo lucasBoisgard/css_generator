@@ -6,9 +6,9 @@
  * Time: 09:27
  */
 
-require("src/function_css_gen.php");
-require ("src/my_scandir.php");
-require ("src/loading.php");
+require("function_css_gen.php");
+require ("my_scandir.php");
+require ("loading.php");
 
 
 
@@ -61,6 +61,7 @@ function 	mergeImage(&$sprite, $image_src, $size_img, $size_sprite/*, $checkLine
  */
 function 	merge_helper($images, $output)
 {
+    var_dump($images);
     $i = 1;
     foreach ($images as $key => $value) {
         show_status($i, count($images));

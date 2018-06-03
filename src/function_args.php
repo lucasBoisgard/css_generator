@@ -10,7 +10,6 @@
 // LOOK GET OPTION
 
 
-const _STR = "Command error";
 
 function    output_sprite($option, &$output) {
     $pic = 1;

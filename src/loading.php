@@ -41,9 +41,3 @@ function show_status($done, $total, $size=50) {
         echo "\n SUCCES : $total Images concatenated\n";
     }
 }
-
-
-/*for($x=1;$x<=100;$x+= 10) {
-    show_status($x, 100);
-    //usleep(100000);
-}*/

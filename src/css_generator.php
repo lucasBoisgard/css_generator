@@ -1,7 +1,7 @@
 <?php
 
-require "src/makeSprite.php";
-require "src/function_args.php";
+require "makeSprite.php";
+require "function_args.php";
 
 function 	check_args($argc, $argv)
 {
@@ -12,7 +12,7 @@ function 	check_args($argc, $argv)
         $option = $argv[1];
         if ($option == "-r" || $option == "-recursive")
             $pic = my_scanDir($argv[2], true);
-        else if (($option == "-i") || substr($option, 0, 14) == "-output-image=")
+        else if (($option == "-i") || $name_sprite_output = substr($option, 0, 14) == "-output-image=")
         {
             $pic = output_sprite($argv,$name_sprite_output);
         }
@@ -21,7 +21,7 @@ function 	check_args($argc, $argv)
             $pic = output_css($argv, $name_css_output);
         }
         else if ($option == '-h' || $option == '-help')
-            echo file_get_contents("src/man");
+            echo file_get_contents("man");
         else if (is_dir($option))
             $pic = my_scanDir($option, false);
 
