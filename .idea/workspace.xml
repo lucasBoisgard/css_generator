@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5582cc1-e74d-45a1-ab66-0c8b7bb33845" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/yoyo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css_generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/css_generator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function_args.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/function_args.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/function_css_gen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/function_css_gen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loading.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/loading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/makeSprite.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/makeSprite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install" beforeDir="false" afterPath="$PROJECT_DIR$/install" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -156,12 +149,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528031520150</updated>
-      <workItem from="1528031521247" duration="18102000" />
+      <workItem from="1528031521247" duration="18701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18102000" />
+    <option name="totallyTimeSpent" value="18701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2867" y="25" width="973" height="1055" extended-state="4" />
