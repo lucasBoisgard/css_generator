@@ -2,9 +2,9 @@
 
 if [ $# -eq 0 ]; then
     if [ ! -f /bin/css_generator ]; then
-    	(sed '1 i\#!/usr/bin/php' src/css_generator.php) > /bin/css_generator
-    	chmod +x /bin/css_generator
-	    echo "Successful installation completed"
+    	cp -r ./src /bin/src && (sed '1 i\#!/usr/bin/php' src/css_generator.php) > /bin/src/css_generator
+    	chmod +x /bin/src
+	    echo "Installation completed"
     else
 	    echo "This program is already installed."
     fi

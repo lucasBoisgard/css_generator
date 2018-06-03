@@ -1,17 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wac
- * Date: 24/05/18
- * Time: 09:27
- */
 
 require("function_css_gen.php");
 require ("my_scandir.php");
 require ("loading.php");
-
-
-
 
 /**
  * @param   string      $image          Image for check size
@@ -33,14 +24,13 @@ function 	getSizeImage($image, $resize = false, $resize_value = 0)
 }
 
 /**
- * @param resource  $sprite
- * @param string    $image_src
- * @param array     $size_img
- * @param array     $size_sprite
- * @param bool      $checkLine
+ * @param resource $sprite
+ * @param string   $image_src
+ * @param array    $size_img
+ * @param array    $size_sprite
  * add $image_src in $sprite with background transparent
  */
-function 	mergeImage(&$sprite, $image_src, $size_img, $size_sprite/*, $checkLine*/)
+function 	mergeImage(&$sprite, $image_src, $size_img, $size_sprite)
 {
     $source = $sprite;
     $image_src = imagecreatefrompng($image_src);
@@ -57,11 +47,11 @@ function 	mergeImage(&$sprite, $image_src, $size_img, $size_sprite/*, $checkLine
     $sprite = $img;
 }
 /**
- * @param array $images
+ * @param array  $images
+ * @param string $output
  */
 function 	merge_helper($images, $output)
 {
-    var_dump($images);
     $i = 1;
     foreach ($images as $key => $value) {
         show_status($i, count($images));
@@ -69,13 +59,13 @@ function 	merge_helper($images, $output)
             $sprite = imagecreatefrompng($value);
         else {
             $size_img = (array)getSizeImage($value);
-            imagepng($sprite, $output);
-            $size_sprite = (array)getSizeImage($output);
-            mergeImage($sprite, $value, $size_img, $size_sprite/*, false*/);
+            imagepng($sprite, "../output/$output");
+            $size_sprite = (array)getSizeImage("../output/$output");
+            mergeImage($sprite, $value, $size_img, $size_sprite);
         }
         $i++;
     }
-    imagepng($sprite, "sprite.png");
+    imagepng($sprite, "../output/$output");
 }
 
 /**
